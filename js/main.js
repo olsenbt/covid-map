@@ -1,5 +1,4 @@
-mapboxgl.accessToken =
-    'pk.eyJ1IjoiamFrb2J6aGFvIiwiYSI6ImNpcms2YWsyMzAwMmtmbG5icTFxZ3ZkdncifQ.P9MBej1xacybKcDN_jehvw';
+mapboxgl.accessToken = 'pk.eyJ1IjoiamFrb2J6aGFvIiwiYSI6ImNpcms2YWsyMzAwMmtmbG5icTFxZ3ZkdncifQ.P9MBej1xacybKcDN_jehvw';
 let map = new mapboxgl.Map({
     container: 'map', // container ID
     projection: 'albers',
@@ -74,7 +73,7 @@ map.on('load', () => {
 const legend = document.getElementById('legend');
 
 //set up legend grades and labels
-var labels = ['<strong>Cases</strong>'], vbreak;
+var labels = ['<strong>Cases'], vbreak;
 //iterate through grades and create a scaled circle and label for each
 for (var i = 0; i < grades.length; i++) {
 vbreak = grades[i];
@@ -89,6 +88,6 @@ labels.push(
 
 }
 const source =
-'<p style="text-align: right; font-size:10pt">Source: <a href="https://earthquake.usgs.gov/earthquakes/">USGS</a></p>';
+'<p style="text-align: right; font-size:10pt">Source: <a href="https://github.com/nytimes/covid-19-data/blob/43d32dde2f87bd4dafbb7d23f5d9e878124018b8/live/us-counties.csv">NY Times</a></p>';
 
 legend.innerHTML = labels.join('') + source;

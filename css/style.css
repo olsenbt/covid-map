@@ -75,3 +75,8 @@ a {
     font-size: 15pt;
     color: white
 }
+
+.mapboxgl-canvas-container.mapboxgl-interactive,
+.mapboxgl-ctrl-group button.mapboxgl-ctrl-compass {
+    cursor: unset;
+}
